@@ -9,3 +9,7 @@
 3. if not dont do anything.
 4. script keeps running for 8 hours. 
 
+## How to run the project
+
+1. download all dependencies using setup.sh
+2. run main.py
