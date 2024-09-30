@@ -12,4 +12,5 @@
 ## How to run the project
 
 1. download all dependencies using setup.sh
+2. download snapchat html file (for now i will automate it later)
 2. run main.py
