@@ -12,5 +12,6 @@
 ## How to run the project
 
 1. download all dependencies using setup.sh
-2. download snapchat html file (for now i will automate it later)
-2. run main.py
+2. set up .env file like sampleenv.txt
+3. run main.py
+4. manually kill the script or wait for 8 hours for it to automatically stop

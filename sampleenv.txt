@@ -1,0 +1,8 @@
+#Windows
+USER_DATA_DIR=C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data
+
+#Mac
+USER_DATA_DIR=/Users/<YourUsername>/Library/Application Support/Google/Chrome
+
+#linux
+USER_DATA_DIR=/home/<YourUsername>/.config/google-chrome
