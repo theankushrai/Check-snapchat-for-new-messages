@@ -58,6 +58,6 @@ chrome_options.add_argument(r"profile-directory=Default")  # You can also specif
 #ensuring max runtime is 8 hours
 for _ in range(8//CHECK_EVERY_X_HOURS):
     check_for_new_messages()
-    time.sleep(CHECK_EVERY_X_HOURS*60)
+    time.sleep(CHECK_EVERY_X_HOURS*60*60)
 
 print("******************** Script Completed ********************\n")
