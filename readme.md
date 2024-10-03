@@ -11,6 +11,10 @@
 
 ## How to run the project
 
+[![Watch the video](https://img.youtube.com/vi/PW-qinmyEgQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=PW-qinmyEgQ)
+
+**watch the above video on how to run the project**
+
 1. download all dependencies using setup.sh
 2. set up .env file like sampleenv.txt
 3. run main.py
