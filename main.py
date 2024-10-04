@@ -3,7 +3,9 @@ from imports import *
 def send_notification(text):
     
     #check if there is a new chat
-    if(text.find('New Chat')==-1): return
+    if(text.find('New Chat')==-1):
+        print("😢 No message !!")
+        return
 
     #cleaning data
     text=emoji.replace_emoji(text,' ') #replacing all the emojis
@@ -14,7 +16,7 @@ def send_notification(text):
     for it in text:
         it=it.split(' ')[-2:] #name of a person
         name=' '.join(it) #join the name back
-        message+=name+" sent a new message !!\n"
+        message+=f"{name} sent a new message !!\n"
         
     
     notification.notify( #notification from plyer
@@ -23,6 +25,9 @@ def send_notification(text):
                 app_name="Social Media Notifier",
                 timeout=60  # Duration the notification stays on the screen (in seconds)
         )
+    
+    print(f"😎 {name} sent a new message !! ")
+
 def check_for_new_messages():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     driver.minimize_window()
@@ -44,7 +49,7 @@ def check_for_new_messages():
 
 print("******************** Script Started ********************\n")
 
-CHECK_EVERY_X_HOURS=int(input("Please enter the frequency (in hours) at which you would like this script to run : "))
+CHECK_EVERY_X_MINUTES=int(input("Please enter the frequency (in minutes) at which you would like this script to run : "))
 
 # Load environment variables from .env file
 load_dotenv()
@@ -56,8 +61,8 @@ chrome_options.add_argument(f"user-data-dir={user_data_dir}")  # Use existing us
 chrome_options.add_argument(r"profile-directory=Default")  # You can also specify other profile directories
 
 #ensuring max runtime is 8 hours
-for _ in range(8//CHECK_EVERY_X_HOURS):
+for _ in range(480//CHECK_EVERY_X_MINUTES):
     check_for_new_messages()
-    time.sleep(CHECK_EVERY_X_HOURS*60*60)
+    time.sleep(CHECK_EVERY_X_MINUTES*60)
 
 print("******************** Script Completed ********************\n")
