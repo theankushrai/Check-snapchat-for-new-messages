@@ -7,8 +7,7 @@ def send_notification(text):
         print("😢 No message !!")
         return
 
-    #cleaning data
-    text=emoji.replace_emoji(text,' ') #replacing all the emojis
+    text=emoji.replace_emoji(text,' ')
     text=re.split("New Chat",text)
     text=text[:-1] #removing last li because its not required
 
@@ -19,7 +18,7 @@ def send_notification(text):
         message+=f"{name} sent a new message !!\n"
         
     
-    notification.notify( #notification from plyer
+    notification.notify(
                 title="Message Reminder",
                 message=message,
                 app_name="Social Media Notifier",
@@ -32,14 +31,12 @@ def check_for_new_messages():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     driver.minimize_window()
 
-    # Navigate to your desired URL (e.g., Snapchat login page)
     driver.get('https://web.snapchat.com/')
     time.sleep(10)
     html_content = driver.page_source
     with open('snapchat.html', "w", encoding='utf-8') as html_file:
         html_file.write(html_content)
 
-    # Re-open the HTML file for reading
     with open('snapchat.html', 'r', encoding='utf-8') as html_file:
         soup = BeautifulSoup(html_file, 'html.parser')
 
@@ -51,11 +48,9 @@ print("******************** Script Started ********************\n")
 
 CHECK_EVERY_X_MINUTES=int(input("Please enter the frequency (in minutes) at which you would like this script to run : "))
 
-# Load environment variables from .env file
 load_dotenv()
 user_data_dir = os.getenv('USER_DATA_DIR')
 
-# Set up Chrome options
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument(f"user-data-dir={user_data_dir}")  # Use existing user profile
 chrome_options.add_argument(r"profile-directory=Default")  # You can also specify other profile directories
