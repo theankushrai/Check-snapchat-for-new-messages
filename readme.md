@@ -11,9 +11,7 @@
 
 ## How to run the project
 
-### 🎥 Watch the Demo  
-[![Watch the video](https://img.youtube.com/vi/0l3FRqL7oXs/hqdefault.jpg)](https://youtu.be/0l3FRqL7oXs)
-
+[![Watch the video](https://img.youtube.com/vi/PW-qinmyEgQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=PW-qinmyEgQ)
 **watch the above video on how to run the project**
 
 1. download all dependencies using setup.sh
