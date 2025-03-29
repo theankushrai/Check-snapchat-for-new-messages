@@ -11,7 +11,8 @@
 
 ## How to run the project
 
-[![Watch the video](https://img.youtube.com/vi/PW-qinmyEgQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=PW-qinmyEgQ)
+### 🎥 Watch the Demo  
+[![Watch the video](https://img.youtube.com/vi/0l3FRqL7oXs/hqdefault.jpg)](https://youtu.be/0l3FRqL7oXs)
 
 **watch the above video on how to run the project**
 
