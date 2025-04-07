@@ -1,20 +1,99 @@
-### Check Snapchat for new messages
 
-*This project which i want to use personally is to check snapchat and infuture whatsapp for new messages. as i am having issues with screen time on my devices. so i was thinking instead of keeping whatsapp/snapchat on and recieving all the messages all the time. create a python script that uses webscraping and selenium to tell me if i have recieved any message and from who*
+# 👀 Snapchat for New Messages – A Smart Notification Checker
 
-## Flow 
+Ever felt overwhelmed by constant notifications from Snapchat or WhatsApp?  
+This project is my personal attempt to fix that — a Python + Selenium script that quietly checks for new messages so I don’t have to stay glued to my phone all day 📵📱
 
-1. run the script
-2. if recieved message get message instantly and then in hour intervals. 
-3. if not dont do anything.
-4. script keeps running for 8 hours. 
+---
 
-## How to run the project
+## 💡 Why I Built This
+
+I was struggling with screen time.  
+Even when I didn’t *want* to check messages, I’d end up opening Snapchat or WhatsApp out of habit — and lose focus.
+
+So I built a tool that:
+- **Checks if I have a new message**
+- **Tells me who it’s from**
+- **Runs silently in the background**
+- And helps me use tech *on my terms*
+
+It’s a small automation, but it’s a big step toward digital mindfulness 🧠
+
+---
+
+## 🧰 Tech Stack
+
+- **Language:** Python 🐍
+- **Tools:** Selenium, Shell scripting
+- **Concepts:** Web scraping, background scripting, `.env` config
+
+---
+
+## 🔄 How It Works
+
+1. You run the script manually.
+2. If there’s a message:
+   - It notifies you instantly.
+   - Then continues checking every hour.
+3. If there’s no message:
+   - It quietly checks again after 1 hour.
+4. It stops automatically after **8 hours**, or you can manually kill it anytime.
+
+---
+
+## 🚀 Getting Started
 
 [![Watch the video](https://img.youtube.com/vi/PW-qinmyEgQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=PW-qinmyEgQ)
 **watch the above video on how to run the project**
 
-1. download all dependencies using setup.sh
-2. set up .env file like sampleenv.txt
-3. run main.py
-4. manually kill the script or wait for 8 hours for it to automatically stop
+### 1. Install Dependencies
+```bash
+./setup.sh
+```
+
+### 2. Set Up Your Environment
+```bash
+cp sampleenv.txt .env
+```
+Then fill in your credentials inside `.env`.
+
+### 3. Run the Script
+```bash
+python main.py
+```
+
+To stop manually:  
+`Ctrl + C`
+
+---
+
+## 🔮 What’s Next?
+
+- [ ] Add support for WhatsApp Web  
+- [ ] Enable desktop/email notifications  
+- [ ] Auto-run using cron jobs or task scheduler  
+
+---
+
+## 🌐 Find Me Online
+
+Want to connect or check out more of my work?
+
+👉 [https://linktr.ee/your-link](https://linktr.ee/theankushrai)
+
+Inside you’ll find:
+- GitHub
+- LeetCode
+- GeeksForGeeks
+- LinkedIn
+
+---
+
+## ✨ Final Thoughts
+
+This project reflects my love for building small, useful tools using **Python**, and learning to automate everyday problems.  
+I’m proud of how **Selenium** let me control the browser like magic 🪄  
+If you're into automation or reducing digital distractions — give it a try!
+
+Thanks for checking this out! 😊
+```
